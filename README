@@ -1,0 +1,17 @@
+1. What is Rubymisc (Ruby miscellaneous | /ˈru:bi ˌmisəˈleiniəs/)
+
+  Miscellaneous and humble tool-set of useful Ruby.
+
+2. Getting started
+
+  2.1 Installation
+
+    gem install rubymisc
+
+  2.2 Usage
+
+3. Development / Contributing
+
+  3.1 Testing code with rspec
+
+    rake spec
