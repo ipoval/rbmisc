@@ -10,6 +10,11 @@
 
   2.2 Usage
 
+    2.2.1 Regular expressions
+
+      P1: Rubymisc::Regex.email
+      P2: Rubymisc::Regex.url
+
 3. Development / Contributing
 
   3.1 Testing code with rspec
