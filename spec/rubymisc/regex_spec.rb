@@ -9,4 +9,17 @@ describe Rubymisc::Regex do
       Rubymisc::Regex.email.should match 'ivan-poval@yandex.ru'
     end
   end
+
+  describe '::url' do
+    specify 'valid url regexp' do
+      Rubymisc::Regex.url.should match 'http://google.com'
+      Rubymisc::Regex.url.should match 'http://www.google.com'
+      Rubymisc::Regex.url.should match 'https://google.com'
+      Rubymisc::Regex.url.should match 'https://www.google.com'
+      Rubymisc::Regex.url.should match 'http://google.com/'
+      Rubymisc::Regex.url.should match 'http://www.google.com/'
+      Rubymisc::Regex.url.should match 'https://google.com/'
+      Rubymisc::Regex.url.should match 'https://www.google.com/'
+    end
+  end
 end
