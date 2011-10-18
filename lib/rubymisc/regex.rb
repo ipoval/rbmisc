@@ -4,7 +4,10 @@ module Rubymisc
   module Regex
     class << self
       def email
-        /^\w{2,}@\w{2,}\.\w{2,3}$/
+        email_name_regex  = '[\w\.%\+\-]+'.freeze
+        domain_head_regex = '(?:[A-Z0-9\-]+\.)+'.freeze
+        domain_tld_regex  = '(?:[A-Z]{2}|com|org|net|edu|gov|mil|biz|info|mobi|name|aero|jobs|museum)'.freeze
+        /\A#{email_name_regex}@#{domain_head_regex}#{domain_tld_regex}\z/i
       end
 
       def url
