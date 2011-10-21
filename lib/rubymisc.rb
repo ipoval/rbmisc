@@ -4,4 +4,5 @@ module Rubymisc
   autoload :Regex, 'rubymisc/regex'
 end
 
+require 'rubymisc/assert'
 require 'rubymisc/version'
