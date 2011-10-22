@@ -1,21 +1,28 @@
 # encoding: utf-8
 
 if defined?('ActiveRecord')
-  module ValidatesUrl
-    def validates_url(attribute = :url)
-      validates_presence_of attribute
-      validates_length_of attribute, :minimum => 12
-      url_re = /^((http|https):(([A-Za-z0-9$_.+!*(),;\/?:@&~=-])|%[A-Fa-f0-9]{2}){2,}(#([a-zA-Z0-9][a-zA-Z0-9$_.+!*(),;\/?:@&~=%-]*))?([A-Za-z0-9$_+!*();\/?:~-]))/
-      validates_format_of attribute, :with => url_re, :message => "isn't a valid URL."
-    end
-  end
+  module Rubymisc
+    module ArValidates
+      def validates_url(attribute = :url)
+        validates_presence_of attribute
+        validates_length_of attribute, :minimum => 12
+        validates_format_of attribute, :with => Regex.url, :message => "isn't a valid URL."
+      end
 
-  module ValidatesEmail
-    def validates_email(attribute = :email)
-      validates_presence_of attribute
-      validates_length_of attribute, :minimum => 5
-      email_re = /^/
-      validates_format_of attribute, :with => email_re, :message => "isn't a valid email."
+      def validates_email(attribute = :email)
+        validates_presence_of attribute
+        validates_length_of attribute, :minimum => 5
+        validates_format_of attribute, :with => Regex.email, :message => "isn't a valid email."
+      end
+
+      def validates_image_url(attribute = :image_url)
+        validates attribute, allow_blank: true, format: {
+          with: %r{\.(gif|jpg|png)$}i,
+          message: 'must be a URL for GIF, JPG or PNG image.'
+        }
+      end
     end
+
+    ActiveRecord::Base.extend ArValidates
   end
 end
