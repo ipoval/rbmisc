@@ -5,6 +5,9 @@ module Rubymisc
 
   autoload :Object, 'rubymisc/ext/object'
   ::Object.class_eval 'include Rubymisc::Object'
+
+  autoload :Integer, 'rubymisc/ext/integer'
+  ::Integer.class_eval 'include Rubymisc::Integer'
 end
 
 require 'rubymisc/assert'
