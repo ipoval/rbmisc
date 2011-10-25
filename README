@@ -15,6 +15,10 @@
       P1: Rubymisc::Regex.email
       P2: Rubymisc::Regex.url
 
+    2.2.2 Object#in?
+
+      P3: 100.in?([1, 2, 3, 4, 5, 100]) # => true
+
 3. Development / Contributing
 
   3.1 Testing code with rspec
