@@ -19,6 +19,10 @@
 
       P3: 100.in?([1, 2, 3, 4, 5, 100]) # => true
 
+    2.2.3 Integer#percent_of
+
+      P4: 50.percent_of(100)            # => 50.0
+
 3. Development / Contributing
 
   3.1 Testing code with rspec
