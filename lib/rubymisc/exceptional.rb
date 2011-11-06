@@ -1,15 +1,15 @@
 # encoding: utf-8
 
 module Rubymisc
-  def ASSERT(&block)
-    begin
-      yield
-    rescue StandardError => e
-      puts e.inspect
-      puts e.backtrace
-      puts 'ASSERT ERROR'
-
-      raise RuntimeError, 'ASSERT ERROR', caller
+  module Exceptional
+    def ASSERT(&block)
+      begin
+        yield
+      rescue StandardError => e
+        STDERR.puts e.inspect
+        STDERR.puts e.backtrace
+        raise RuntimeError, "#{e.message}", caller
+      end
     end
   end
 

@@ -6,6 +6,9 @@ module Rubymisc
   autoload :Object, 'rubymisc/ext/object'
   ::Object.class_eval 'include Rubymisc::Object'
 
+  autoload :Exceptional, 'rubymisc/exceptional'
+  ::Object.class_eval 'include Rubymisc::Exceptional'
+
   autoload :Integer, 'rubymisc/ext/integer'
   ::Integer.class_eval 'include Rubymisc::Integer'
 
@@ -13,5 +16,4 @@ module Rubymisc
   ::Float.class_eval 'include Rubymisc::Float'
 end
 
-require 'rubymisc/assert'
 require 'rubymisc/version'

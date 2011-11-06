@@ -1,5 +1,7 @@
 # encoding: utf-8
 
+require 'spec_helper'
+
 describe Rubymisc::Float do
   describe '#percent_of' do
     specify '50.0 is 50.0 percent of 100' do
