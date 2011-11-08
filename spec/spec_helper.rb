@@ -1,6 +1,11 @@
 # encoding: utf-8
 
 $:.unshift File.expand_path('../lib', __FILE__)
+
+# Use simplecov test coverage
+require 'simplecov'
+SimpleCov.start
+
 require 'rubymisc'
 Dir['./spec/support/**/*.rb'].each { |f| require f }
 
