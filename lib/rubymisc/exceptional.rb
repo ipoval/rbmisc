@@ -11,33 +11,32 @@ module Rubymisc
         raise RuntimeError, "#{e.message}", caller
       end
     end
-  end
 
-  ##
-  # @example
-  #   begin; raise 'Timeout socket'; rescue errors_with_message(/socket/); p 'socket E'; end
-  #
-  def errors_with_message(pattern)
-    m = Module.new
-    (class << m; self; end).instance_eval do
-      define_method(:===) do |e|
-        pattern === e.message
+    ##
+    # @example
+    #   begin; raise 'Timeout socket'; rescue errors_with_message(/socket/); p 'socket E'; end
+    #
+    def errors_with_message(pattern)
+      m = Module.new
+      (class << m; self; end).instance_eval do
+        define_method(:===) do |e|
+          pattern === e.message
+        end
       end
+      m
     end
-    m
-  end
 
-  ##
-  # @example
-  #   rescue => e; raise NestedException.new('Error B', e); end
-  #
-  #   rescue; raise NestedException, 'Error B'; end
-  #
-  class NestedException < StandardError
-    attr_reader :original
-    def initialize(msg, original = $!)
-      super(msg)
-      @original = original
+    ##
+    # @example
+    #   rescue => e; raise NestedException.new('Error B', e); end
+    #   rescue; raise NestedException, 'Error B'; end
+    #
+    class NestedException < StandardError
+      attr_reader :original
+      def initialize(msg, original = $!)
+        super(msg)
+        @original = original
+      end
     end
   end
 end
