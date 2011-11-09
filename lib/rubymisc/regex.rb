@@ -13,6 +13,10 @@ module Rubymisc
       def url
         /\A((http|https):(([A-Za-z0-9$_.+!*(),;\/?:@&~=-])|%[A-Fa-f0-9]{2}){2,}(#([a-zA-Z0-9][a-zA-Z0-9$_.+!*(),;\/?:@&~=%-]*))?([A-Za-z0-9$_+!*();\/?:~-]))\z/
       end
+
+      def zip
+        /\A\d{5}(-\d{4})?\z/
+      end
     end
   end
 end
