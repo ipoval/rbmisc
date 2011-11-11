@@ -11,8 +11,13 @@
     p2: Rubymisc::Regex.url
     p3: Rubymisc::Regex.zip
 
-  2.2 Object#in?
-    p4: 100.in?([1, 2, 3, 4, 5, 100]) # => true
+  2.2 Object
+
+    2.2.1 Object#in?
+      p4: 100.in?([1, 2, 3, 4, 5, 100]) # => true
+
+    2.2.2 Object#errors_with_message
+      p5: begin; raise 'Timeout socket'; rescue errors_with_message(/socket/); p 'socket E'; end
 
   2.3 Integer#percent_of
     p5: 50.percent_of(100)            # => 50.0
