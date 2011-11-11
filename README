@@ -1,5 +1,5 @@
 1 What is Rubymisc (Ruby miscellaneous | /ˈru:bi ˌmisəˈleiniəs/)
-  Miscellaneous and humble tool-set of useful Ruby.
+  Miscellaneous and humble tool-set of useful Ruby
 
   1.1 Installation
     gem install rubymisc
@@ -20,7 +20,7 @@
       p5: begin; raise 'Timeout socket'; rescue errors_with_message(/socket/); p 'socket E'; end
 
   2.3 Integer#percent_of
-    p6: 50.percent_of(100)            # => 50.0
+    p6: 50.percent_of(100)              # => 50.0
 
 3 Development / Contributing
 

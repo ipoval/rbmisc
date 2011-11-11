@@ -18,5 +18,9 @@ module Rubymisc
         /\A\d{5}(-\d{4})?\z/
       end
     end
+
+    class Manual
+      
+    end
   end
 end
