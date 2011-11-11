@@ -20,7 +20,7 @@
       p5: begin; raise 'Timeout socket'; rescue errors_with_message(/socket/); p 'socket E'; end
 
   2.3 Integer#percent_of
-    p5: 50.percent_of(100)            # => 50.0
+    p6: 50.percent_of(100)            # => 50.0
 
 3 Development / Contributing
 
