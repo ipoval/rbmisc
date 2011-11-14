@@ -39,4 +39,14 @@ describe Rubymisc::Regex do
       Rubymisc::Regex.hexcode.should_not match 'fff'
     end
   end
+
+  describe '.usd' do
+    specify '.usd' do
+      Rubymisc::Regex.usd.should match '$20'
+      Rubymisc::Regex.usd.should match '$15,000.01'
+
+      Rubymisc::Regex.usd.should_not match '$1.001'
+      Rubymisc::Regex.usd.should_not match '$.99'
+    end
+  end
 end

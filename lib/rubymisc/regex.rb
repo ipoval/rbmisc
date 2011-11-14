@@ -25,6 +25,10 @@ module Rubymisc
         /\A##{hex_tierce}(#{hex_tierce})?\z/
       end
 
+      def usd
+        /\A\$(\d{1,3}(\,\d{3})*|\d+)(\.\d{2})?\z/
+      end
+
       def man
         Manual.man
       end
