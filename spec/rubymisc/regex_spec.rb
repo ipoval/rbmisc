@@ -31,4 +31,12 @@ describe Rubymisc::Regex do
       Rubymisc::Regex.zip.should_not match '9002'
     end
   end
+
+  describe '.hexcode' do
+    specify 'valid html hex code' do
+      Rubymisc::Regex.hexcode.should match '#aaa'
+      Rubymisc::Regex.hexcode.should match '#000000'
+      Rubymisc::Regex.hexcode.should_not match 'fff'
+    end
+  end
 end
