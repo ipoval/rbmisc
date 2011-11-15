@@ -10,19 +10,20 @@
     p1: Rubymisc::Regex.email
     p2: Rubymisc::Regex.url
     p3: Rubymisc::Regex.zip
-    p4: Rubymisc::Regex.hexcode
-    p5: Rubymisc::Regex.usd
+    p4: Rubymisc::Regex.ipv4
+    p5: Rubymisc::Regex.hexcode
+    p6: Rubymisc::Regex.usd
 
   2.2 Object
 
     2.2.1 Object#in?
-      p6: 100.in?([1, 2, 3, 4, 5, 100]) # => true
+      p7: 100.in?([1, 2, 3, 4, 5, 100]) # => true
 
     2.2.2 Object#errors_with_message
-      p7: begin; raise 'Timeout socket'; rescue errors_with_message(/socket/); p 'socket E'; end
+      p8: begin; raise 'Timeout socket'; rescue errors_with_message(/socket/); p 'socket E'; end
 
   2.3 Integer#percent_of
-    p8: 50.percent_of(100)              # => 50.0
+    p9: 50.percent_of(100)              # => 50.0
 
 3 Development / Contributing
 

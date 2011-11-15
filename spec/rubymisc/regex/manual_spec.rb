@@ -21,4 +21,4 @@ Ruby character representations
   \\cchar          Named control character.
     EOS
   end
-end 
+end

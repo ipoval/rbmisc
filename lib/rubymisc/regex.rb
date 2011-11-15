@@ -20,6 +20,11 @@ module Rubymisc
         /\A\d{5}(-\d{4})?\z/
       end
 
+      def ipv4
+        ip_octet = '(\d|[01]?\d\d|2[0-4]\d|25[0-5])'.freeze
+        /\A#{ip_octet}\.#{ip_octet}\.#{ip_octet}\.#{ip_octet}\z/
+      end
+
       def hexcode
         hex_tierce = '(?:[a-zA-Z0-9]){3}'.freeze
         /\A##{hex_tierce}(#{hex_tierce})?\z/

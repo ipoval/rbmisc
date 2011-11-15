@@ -32,6 +32,15 @@ describe Rubymisc::Regex do
     end
   end
 
+  describe '.ipv4' do
+    specify 'valid dotted quad IP address' do
+      Rubymisc::Regex.ipv4.should match '127.0.0.1'
+      Rubymisc::Regex.ipv4.should match '224.22.5.110'
+
+      Rubymisc::Regex.ipv4.should_not match '127.1'
+    end
+  end
+
   describe '.hexcode' do
     specify 'valid html hex code' do
       Rubymisc::Regex.hexcode.should match '#aaa'
