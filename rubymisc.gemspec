@@ -20,11 +20,11 @@ Gem::Specification.new do |s|
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   s.require_paths = ['lib']
 
-  s.required_ruby_version = '>= 1.9.3'
+  s.required_ruby_version = '>= 1.9.2'
   s.required_rubygems_version = '>= 1.3.5'
 
   { rspec:     '~> 2.8.0.rc1',
     rake:      '~> 0.9.2',
-    bundler:   '~> 1.0.21',
+    bundler:   '~> 1.0.7',
     simplecov: '~> 0.5.4' }.each { |lib, v| s.add_development_dependency lib, v }
 end
