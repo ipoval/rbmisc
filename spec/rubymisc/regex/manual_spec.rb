@@ -4,7 +4,7 @@ require 'spec_helper'
 
 describe 'Rubymisc::Regex::Manual' do
   specify '.man' do
-    Rubymisc::Regex.man.should == <<-EOS
+    Rubymisc::Regex.man.should be_start_with <<-EOS
 Ruby character representations
 ------------------------------
   Sequence        Meaning
@@ -20,5 +20,7 @@ Ruby character representations
   \\xhex           Character specified by a two-digit hexadecimal code.
   \\cchar          Named control character.
     EOS
+
+    puts "\n" + Rubymisc::Regex.man
   end
 end

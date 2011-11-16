@@ -19,6 +19,12 @@ Ruby character representations
   \\0octal         Character specified by a two-digit octal code.
   \\xhex           Character specified by a two-digit hexadecimal code.
   \\cchar          Named control character.
+
+Ruby character classses and class-like constructs
+-------------------------------------------------
+  Class           Meaning
+  [...]           A single character listed, or contained within a listed range.
+  [^...]          A single character not listed, and not contained within a listed range.
         EOS
       end
     end

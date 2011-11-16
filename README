@@ -7,23 +7,24 @@
 2 Usage
 
   2.1 Regular expressions
-    p1: Rubymisc::Regex.email
-    p2: Rubymisc::Regex.url
-    p3: Rubymisc::Regex.zip
-    p4: Rubymisc::Regex.ipv4
-    p5: Rubymisc::Regex.hexcode
-    p6: Rubymisc::Regex.usd
+    e1: Rubymisc::Regex.email
+    e2: Rubymisc::Regex.url
+    e3: Rubymisc::Regex.zip
+    e4: Rubymisc::Regex.ipv4
+    e5: Rubymisc::Regex.mac_address
+    e6: Rubymisc::Regex.hexcode
+    e7: Rubymisc::Regex.usd
 
   2.2 Object
 
     2.2.1 Object#in?
-      p7: 100.in?([1, 2, 3, 4, 5, 100]) # => true
+      e8: 100.in?([1, 2, 3, 4, 5, 100]) # => true
 
     2.2.2 Object#errors_with_message
-      p8: begin; raise 'Timeout socket'; rescue errors_with_message(/socket/); p 'socket E'; end
+      e9: begin; raise 'Timeout socket'; rescue errors_with_message(/socket/); p 'socket E'; end
 
   2.3 Integer#percent_of
-    p9: 50.percent_of(100)              # => 50.0
+    e10: 50.percent_of(100)             # => 50.0
 
 3 Development / Contributing
 

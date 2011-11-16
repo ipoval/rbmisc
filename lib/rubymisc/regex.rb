@@ -4,6 +4,8 @@ module Rubymisc
   module Regex
     autoload :Manual, File.expand_path('../regex/manual', __FILE__)
 
+    @@hexd = '(?:[a-fA-F0-9])'.freeze
+
     class << self
       def email
         email_name_regex  = '[\w\.%\+\-]+'.freeze
@@ -13,7 +15,7 @@ module Rubymisc
       end
 
       def url
-        /\A((https?):(([A-Za-z0-9$_.+!*(),;\/?:@&~=-])|%[A-Fa-f0-9]{2}){2,}(#([a-zA-Z0-9][a-zA-Z0-9$_.+!*(),;\/?:@&~=%-]*))?([A-Za-z0-9$_+!*();\/?:~-]))\z/
+        /\A((https?):(([A-Za-z0-9$_.+!*(),;\/?:@&~=-])|%[A-Za-z0-9]{2}){2,}(#([a-zA-Z0-9][a-zA-Z0-9$_.+!*(),;\/?:@&~=%-]*))?([A-Za-z0-9$_+!*();\/?:~-]))\z/
       end
 
       def zip
@@ -25,8 +27,12 @@ module Rubymisc
         /\A#{ip_octet}\.#{ip_octet}\.#{ip_octet}\.#{ip_octet}\z/
       end
 
+      def mac_address
+        /\A(#{@@hexd}{2}:){5}#{@@hexd}{2}\z/
+      end
+
       def hexcode
-        hex_tierce = '(?:[a-zA-Z0-9]){3}'.freeze
+        hex_tierce = "#{@@hexd}{3}".freeze
         /\A##{hex_tierce}(#{hex_tierce})?\z/
       end
 

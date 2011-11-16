@@ -27,7 +27,6 @@ describe Rubymisc::Regex do
     specify 'valid zip regexp' do
       Rubymisc::Regex.zip.should match '90028'
       Rubymisc::Regex.zip.should match '90028-0000'
-
       Rubymisc::Regex.zip.should_not match '9002'
     end
   end
@@ -36,8 +35,15 @@ describe Rubymisc::Regex do
     specify 'valid dotted quad IP address' do
       Rubymisc::Regex.ipv4.should match '127.0.0.1'
       Rubymisc::Regex.ipv4.should match '224.22.5.110'
-
       Rubymisc::Regex.ipv4.should_not match '127.1'
+    end
+  end
+
+  describe '.mac_address' do
+    specify 'valid mac address' do
+      Rubymisc::Regex.mac_address.should match '01:23:45:67:89:ab'
+      Rubymisc::Regex.mac_address.should_not match '01:23:45'
+      Rubymisc::Regex.mac_address.should_not match '0123456789ab'
     end
   end
 
@@ -46,6 +52,7 @@ describe Rubymisc::Regex do
       Rubymisc::Regex.hexcode.should match '#aaa'
       Rubymisc::Regex.hexcode.should match '#000000'
       Rubymisc::Regex.hexcode.should_not match 'fff'
+      Rubymisc::Regex.hexcode.should_not match '#ggg'
     end
   end
 
@@ -53,7 +60,6 @@ describe Rubymisc::Regex do
     specify '.usd' do
       Rubymisc::Regex.usd.should match '$20'
       Rubymisc::Regex.usd.should match '$15,000.01'
-
       Rubymisc::Regex.usd.should_not match '$1.001'
       Rubymisc::Regex.usd.should_not match '$.99'
     end
