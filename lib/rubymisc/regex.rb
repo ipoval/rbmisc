@@ -39,10 +39,12 @@ module Rubymisc
       def usd
         /\A\$(\d{1,3}(\,\d{3})*|\d+)(\.\d{2})?\z/
       end
-
-      def man
-        Manual.man
-      end
     end
+
+    code = <<-CODE
+      def man; Manual.man; end
+    CODE
+
+    singleton_class.module_eval code
   end
 end

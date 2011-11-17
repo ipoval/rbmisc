@@ -25,6 +25,13 @@ Ruby character classses and class-like constructs
   Class           Meaning
   [...]           A single character listed, or contained within a listed range.
   [^...]          A single character not listed, and not contained within a listed range.
+  .               Any character, except a line terminator (unless single-line mode, s).
+  \\w              Word character.
+  \\W              Nonword character.
+  \\d              Digit.
+  \\D              Nondigit.
+  \\s              Whitespace character, [\\f\\n\\r\\t\\v].
+  \\S              Nonwhitespace character, [^\\f\\n\\r\\t\\v].
         EOS
       end
     end
