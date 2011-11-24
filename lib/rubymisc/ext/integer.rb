@@ -7,3 +7,5 @@ module Rubymisc
     end
   end
 end
+
+::Integer.class_eval 'include Rubymisc::Integer'

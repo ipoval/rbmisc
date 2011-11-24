@@ -7,3 +7,5 @@ module Rubymisc
     end
   end
 end
+
+::Object.class_eval 'include Rubymisc::Object'

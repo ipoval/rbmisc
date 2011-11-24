@@ -6,13 +6,13 @@ if defined?('ActiveRecord')
       def validates_url(attribute = :url)
         validates_presence_of attribute
         validates_length_of attribute, :minimum => 12
-        validates_format_of attribute, :with => Regex.url, :message => "isn't a valid URL."
+        validates_format_of attribute, :with => Regex.url, :message => %/isn't a valid URL./
       end
 
       def validates_email(attribute = :email)
         validates_presence_of attribute
         validates_length_of attribute, :minimum => 5
-        validates_format_of attribute, :with => Regex.email, :message => "isn't a valid email."
+        validates_format_of attribute, :with => Regex.email, :message => %/isn't a valid email./
       end
 
       def validates_image_url(attribute = :image_url)

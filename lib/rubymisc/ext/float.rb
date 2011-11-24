@@ -7,3 +7,5 @@ module Rubymisc
     end
   end
 end
+
+::Float.class_eval 'include Rubymisc::Float'
