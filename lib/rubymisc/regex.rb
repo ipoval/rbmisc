@@ -4,8 +4,6 @@ module Rubymisc
   module Regex
     autoload :Manual, File.expand_path('../regex/manual', __FILE__)
 
-    @@hexd = '(?:[a-fA-F0-9])'.freeze
-
     class << self
       def email
         email_name_regex  = '[\w\.%\+\-]+'.freeze
@@ -28,11 +26,11 @@ module Rubymisc
       end
 
       def mac_address
-        /\A(#{@@hexd}{2}:){5}#{@@hexd}{2}\z/
+        /\A(\h{2}:){5}\h{2}\z/
       end
 
       def hexcode
-        hex_tierce = "#{@@hexd}{3}".freeze
+        hex_tierce = '\h{3}'.freeze
         /\A##{hex_tierce}(#{hex_tierce})?\z/
       end
 
