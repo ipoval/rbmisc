@@ -17,7 +17,7 @@ module Rubymisc
       end
 
       def zip
-        /\A\d{5}(-\d{4})?\z/
+        /\A\d{5}(?:-\d{4})?\z/
       end
 
       def ipv4
@@ -30,8 +30,7 @@ module Rubymisc
       end
 
       def hexcode
-        hex_tierce = '\h{3}'.freeze
-        /\A##{hex_tierce}(#{hex_tierce})?\z/
+        /\A#(\h{3})\1?\z/
       end
 
       def usd
