@@ -26,8 +26,8 @@ describe Rubymisc::Object do
     end
 
     specify 'Object#instance_of? returns false when class matches with #not Functor' do
-      100.instance_of? Fixnum
-      100.not.instance_of? Fixnum
+      100.instance_of?(Fixnum).should be true
+      100.not.instance_of?(Fixnum).should be false
     end
 
     specify 'Enumerable#include? returns false for collection having an element with #not Functor' do
