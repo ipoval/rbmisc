@@ -8,4 +8,4 @@ module Rubymisc
   end
 end
 
-::Integer.class_eval 'include Rubymisc::Integer'
+::Integer.module_eval 'include Rubymisc::Integer'

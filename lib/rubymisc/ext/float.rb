@@ -8,4 +8,4 @@ module Rubymisc
   end
 end
 
-::Float.class_eval 'include Rubymisc::Float'
+::Float.module_eval 'include Rubymisc::Float'

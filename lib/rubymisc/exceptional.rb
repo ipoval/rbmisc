@@ -41,4 +41,4 @@ module Rubymisc
   end
 end
 
-::Object.class_eval 'include Rubymisc::Exceptional'
+::Object.module_eval 'include Rubymisc::Exceptional'
