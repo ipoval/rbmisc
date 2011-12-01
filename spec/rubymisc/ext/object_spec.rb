@@ -25,6 +25,11 @@ describe Rubymisc::Object do
       ''.not.empty?.should be false
     end
 
+    specify 'Object#instance_of? returns false when class matches with #not Functor' do
+      100.instance_of? Fixnum
+      100.not.instance_of? Fixnum
+    end
+
     specify 'Enumerable#include? returns false for collection having an element with #not Functor' do
       collection.include?(1).should be true
       collection.not.include?(1).should be false
