@@ -23,6 +23,9 @@ Gem::Specification.new do |s|
   s.required_ruby_version = '>= 1.9.3'
   s.required_rubygems_version = '>= 1.3.5'
 
+  spec.extra_rdoc_files = ['README']
+  spec.license = 'MIT'
+
   { rspec:     '~> 2.8.0.rc1',
     rake:      '~> 0.9.2',
     bundler:   '~> 1.0.21',
