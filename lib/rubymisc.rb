@@ -1,12 +1,11 @@
 # encoding: utf-8
 
 module Rubymisc
-  autoload :Object,      'rubymisc/ext/object'
-  autoload :Integer,     'rubymisc/ext/integer'
-  autoload :Float,       'rubymisc/ext/float'
-
-  autoload :Regex,       'rubymisc/regex'
-  autoload :Exceptional, 'rubymisc/exceptional'
 end
 
+require 'rubymisc/ext/object'
+require 'rubymisc/ext/integer'
+require 'rubymisc/ext/float'
+require 'rubymisc/regex'
+require 'rubymisc/exceptional'
 require 'rubymisc/version'
