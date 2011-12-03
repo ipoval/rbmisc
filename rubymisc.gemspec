@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.authors     = ['Ivan Povalyukhin']
   s.email       = ['ipoval@ya.ru']
   s.homepage    = 'https://github.com/ipoval/rubymisc'
-  s.summary     = %q{Ruby miscellaneous}
+  s.summary     = %q{Ruby miscellaneous.}
   s.description = %q{Miscellaneous and humble tool-set of useful Ruby.}
 
   s.rubyforge_project = 'rubymisc'
