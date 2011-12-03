@@ -17,16 +17,25 @@
 
   2.2 Object
 
-    2.2.1 Object#in?
+    2.2.1 #in?
       e8: 100.in?([1, 2, 3, 4, 5, 100]) # => true
 
-    2.2.2 Object#errors_with_message
-      e9: begin; raise 'Timeout socket'; rescue errors_with_message(/socket/); p 'socket E'; end
+    2.2.2 #not functor
+      e9: 100.not.instance_of?(Fixnum)  # => false
+
+    2.2.3 #errors_with_message
+      e10: begin; raise 'Timeout socket'; rescue errors_with_message(/socket/); p 'socket E'; end
 
   2.3 Integer#percent_of
-    e10: 50.percent_of(100)             # => 50.0
+    e11: 50.percent_of(100)             # => 50.0
 
-3 Development / Contributing
+  2.4 ActiveRecord::Base
+    .validates_url
+    .validates_email
+    .validates_image_url
 
-  3.1 Testing code with rspec
-    rake spec
+3 Development
+
+  - `gem install bundler`
+  - `bundle install`
+  - `bundle exec rake spec`
