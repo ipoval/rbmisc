@@ -29,7 +29,7 @@
   2.3 Integer
 
     #percent_of
-      e11: 50.percent_of(100)             # => 50.0
+      e11: 50.percent_of(100)           # => 50.0
 
   2.4 ActiveRecord::Base
     .validates_url
