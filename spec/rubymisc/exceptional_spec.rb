@@ -4,9 +4,9 @@ require 'spec_helper'
 
 describe Rubymisc::Exceptional do
   describe '#ASSERT' do
-    specify 'catches failing block and raises RuntimeError' do
-      failing_proc = -> { fail 'Fail message!' }
-      expect { ASSERT &failing_proc }.to raise_error RuntimeError
+    specify 'catches failing block and swallows the exception' do
+      failing_proc = -> { fail SecurityError.new('Fail message!') }
+      expect { ASSERT &failing_proc }.not_to raise_error
     end
 
     specify 'ok block does not raise error' do

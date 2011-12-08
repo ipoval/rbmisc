@@ -9,3 +9,8 @@ require 'rubymisc/ext/float'
 require 'rubymisc/regex'
 require 'rubymisc/exceptional'
 require 'rubymisc/version'
+
+__END__
+###
+# Copyright (C) 2011 Ivan Povalyukhin.
+###

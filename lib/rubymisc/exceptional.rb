@@ -5,10 +5,10 @@ module Rubymisc
     def ASSERT(&block)
       begin
         yield
-      rescue StandardError => e
+      rescue Exception => e
         STDERR.puts e.inspect
         STDERR.puts e.backtrace
-        raise RuntimeError, "#{e.message}", caller
+        # raise e.class, "#{e.message}", caller
       end
     end
 
