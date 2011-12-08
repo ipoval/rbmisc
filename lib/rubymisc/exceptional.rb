@@ -32,7 +32,8 @@ module Rubymisc
     #   rescue; raise NestedException, 'Error B'; end
     #
     class NestedException < StandardError
-      attr_reader :original
+      attr :original
+
       def initialize(msg, original = $!)
         super(msg)
         @original = original
