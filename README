@@ -34,7 +34,12 @@
     #percent_of
       e12: 50.percent_of(100)           # => 50.0
 
-  2.4 ActiveRecord::Base
+  2.4 String
+
+    #^
+      e13: 'rubymisc' ^ 'test'          # => "\u0006\u0010\u0011\r\u0019\f\u0000\u0017"
+
+  2.5 ActiveRecord::Base
 
     .validates_url
     .validates_email
