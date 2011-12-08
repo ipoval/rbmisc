@@ -3,9 +3,11 @@
 module Rubymisc
   module String
     def ^(key)
-      key_num = key.bytes.cycle
-      bytes.map { |byte| byte ^ key_num.next }.pack('C*').force_encoding(self.encoding)
+      key_bytes = key.bytes.cycle
+      xor_proc = ->(byte) { byte ^ key_bytes.next }
+      bytes.map(&xor_proc).pack('C*').force_encoding(self.encoding)
     end
+    alias_method :xor, :^
   end
 end
 
