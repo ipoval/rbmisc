@@ -37,7 +37,7 @@
   2.4 String
 
     #^, #xor
-      e13: 'rubymisc'.xor 'test'          # => "\u0006\u0010\u0011\r\u0019\f\u0000\u0017"
+      e13: 'rubymisc'.xor 'test'        # => "\u0006\u0010\u0011\r\u0019\f\u0000\u0017"
 
   2.5 ActiveRecord::Base
 
