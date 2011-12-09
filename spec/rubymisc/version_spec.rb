@@ -3,5 +3,5 @@
 require 'spec_helper'
 
 describe Rubymisc::VERSION do
-  it { should =~ /\A\d+\.\d+\.\d+\z/ }
+  it { should =~ /\A\d+\.\d+\.\d+(\.\d+)?\z/ }
 end

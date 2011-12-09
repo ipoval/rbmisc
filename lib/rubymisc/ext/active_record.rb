@@ -1,6 +1,6 @@
 # encoding: utf-8
 
-if defined?('ActiveRecord')
+if defined?(ActiveRecord)
   module Rubymisc
     module ArValidates
       def validates_url(attribute = :url)
