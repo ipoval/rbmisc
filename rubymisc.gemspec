@@ -29,5 +29,5 @@ Gem::Specification.new do |s|
   { rspec:     '~> 2.8.0.rc1',
     rake:      '~> 0.9.2.2',
     bundler:   '~> 1.0.21',
-    simplecov: '~> 0.5.4' }.each { |lib, v| s.add_development_dependency lib, v }
+    simplecov: '~> 0.5.4' }.each { |lib, v| s.add_development_dependency lib.to_s, v }
 end
