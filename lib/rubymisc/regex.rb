@@ -30,7 +30,7 @@ module Rubymisc
       end
 
       def hexcode
-        /\A#(\h{3})\1?\z/
+        /\A#(\h{3}){1,2}\z/
       end
 
       def usd

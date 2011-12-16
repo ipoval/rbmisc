@@ -50,7 +50,7 @@ describe Rubymisc::Regex do
   describe '.hexcode' do
     specify 'valid html hex code' do
       Rubymisc::Regex.hexcode.should match '#aaa'
-      Rubymisc::Regex.hexcode.should match '#000000'
+      Rubymisc::Regex.hexcode.should match '#000AAA'
       Rubymisc::Regex.hexcode.should_not match 'fff'
       Rubymisc::Regex.hexcode.should_not match '#ggg'
     end
