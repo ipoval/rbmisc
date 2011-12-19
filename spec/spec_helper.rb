@@ -2,8 +2,7 @@
 
 $:.unshift File.expand_path('../lib', __FILE__)
 
-# Use simplecov test coverage
-require 'simplecov'
+require 'simplecov' # use simplecov test coverage
 SimpleCov.start
 
 require 'rubymisc'
