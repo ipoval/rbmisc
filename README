@@ -9,13 +9,14 @@
 2 Usage
 
   2.1 Regular expressions
-    e1: Rubymisc::Regex.email
-    e2: Rubymisc::Regex.url
-    e3: Rubymisc::Regex.zip
-    e4: Rubymisc::Regex.ipv4
-    e5: Rubymisc::Regex.mac_address
-    e6: Rubymisc::Regex.hexcode
-    e7: Rubymisc::Regex.usd
+
+    e1: Rbm::Regex.email
+    e2: Rbm::Regex.url
+    e3: Rbm::Regex.zip
+    e4: Rbm::Regex.ipv4
+    e5: Rbm::Regex.mac_address
+    e6: Rbm::Regex.hexcode
+    e7: Rbm::Regex.usd
 
   2.2 Object
 
