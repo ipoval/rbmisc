@@ -5,7 +5,10 @@ $:.unshift File.expand_path('../lib', __FILE__)
 require 'simplecov' # use simplecov test coverage
 SimpleCov.start
 
+require 'yaml'
+require 'fileutils'
 require 'rubymisc'
+
 Dir['./spec/support/**/*.rb'].each { |f| require f }
 
 RSpec.configure do |conf|

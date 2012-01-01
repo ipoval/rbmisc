@@ -2,7 +2,7 @@
 
 require 'spec_helper'
 
-describe Rubymisc::Exceptional do
+describe Rbm::Exceptional do
   describe '#ASSERT' do
     specify 'catches failing block and swallows the exception' do
       failing_proc = -> { fail SecurityError.new('Fail message!') }

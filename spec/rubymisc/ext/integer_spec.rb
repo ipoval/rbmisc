@@ -2,7 +2,7 @@
 
 require 'spec_helper'
 
-describe Rubymisc::Integer do
+describe Rbm::Integer do
   describe '#percent_of' do
     specify '50 is 50.0 percent of 100' do
       50.percent_of(100).should be_kind_of Float

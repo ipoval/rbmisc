@@ -4,7 +4,7 @@ require 'irb/completion'
 IRB.conf[:AUTO_INDENT] = true
 
 ##
-#  @example:
+#  @example
 #    time { 1_000_000.times { 'word'.upcase } }
 #
 def time(&block)

@@ -2,7 +2,7 @@
 
 require 'spec_helper'
 
-describe Rubymisc::String do
+describe Rbm::String do
   let(:test_string) { 'rubymisc' }
 
   describe '#^' do

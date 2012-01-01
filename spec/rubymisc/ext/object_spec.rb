@@ -2,7 +2,7 @@
 
 require 'spec_helper'
 
-describe Rubymisc::Object do
+describe Rbm::Object do
   let(:collection) { [1, 2, 3, 4, 5, 100] }
 
   describe '#in?' do

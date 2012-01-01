@@ -2,9 +2,9 @@
 
 require 'spec_helper'
 
-describe 'Rubymisc::Regex::Manual' do
+describe Rbm::Regex::Manual do
   specify '.man' do
-    Rubymisc::Regex.man.should be_start_with <<-EOS
+    Rbm::Regex.man.should be_start_with <<-EOS
 Ruby character representations
 ------------------------------
   Sequence        Meaning
@@ -21,6 +21,6 @@ Ruby character representations
   \\cchar          Named control character.
     EOS
 
-    puts "\n" + Rubymisc::Regex.man
+    puts "\n" + Rbm::Regex.man
   end
 end
