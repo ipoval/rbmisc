@@ -10,37 +10,38 @@
 
   2.1 Regular expressions
 
-    e1: Rbm::Regex.email
-    e2: Rbm::Regex.url
-    e3: Rbm::Regex.zip
-    e4: Rbm::Regex.ipv4
-    e5: Rbm::Regex.mac_address
-    e6: Rbm::Regex.hexcode
-    e7: Rbm::Regex.usd
+    e1: puts Rbm::Regex.man
+    e2: Rbm::Regex.email
+    e3: Rbm::Regex.url
+    e4: Rbm::Regex.zip
+    e5: Rbm::Regex.ipv4
+    e6: Rbm::Regex.mac_address
+    e7: Rbm::Regex.hexcode
+    e8: Rbm::Regex.usd
 
   2.2 Object
 
     #in?
-      e8: 100.in?([1, 2, 3, 4, 5, 100]) # => true
+      e9: 100.in?([1, 2, 3, 4, 5, 100]) # => true
 
     #not functor
-      e9: 100.not.instance_of?(Fixnum)  # => false
+      e10: 100.not.instance_of?(Fixnum)  # => false
 
     #errors_with_message
-      e10: begin; raise 'Timeout socket'; rescue errors_with_message(/socket/); p 'socket E'; end
+      e11: begin; raise 'Timeout socket'; rescue errors_with_message(/socket/); p 'socket E'; end
 
     #ASSERT
-      e11: ASSERT { fail SecurityError.new('Fail message!') }
+      e12: ASSERT { fail SecurityError.new('Fail message!') }
 
   2.3 Integer
 
     #percent_of
-      e12: 50.percent_of(100)           # => 50.0
+      e13: 50.percent_of(100)           # => 50.0
 
   2.4 String
 
     #^, #xor
-      e13: 'rubymisc'.xor 'test'        # => "\u0006\u0010\u0011\r\u0019\f\u0000\u0017"
+      e14: 'rubymisc'.xor 'test'        # => "\u0006\u0010\u0011\r\u0019\f\u0000\u0017"
 
   2.5 ActiveRecord::Base
 
