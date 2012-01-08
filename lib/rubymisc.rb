@@ -21,6 +21,3 @@ module Rbm
   include Rubymisc
   extend Rubymisc
 end
-
-__END__
-# Copyright (c) 2011 Ivan Povalyukhin.

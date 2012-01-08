@@ -2,7 +2,7 @@
 
 require 'spec_helper'
 
-describe Rubymisc do
+describe Rbm do
   describe '.log_at_exit_error' do
     let(:crash_log) { 'rubymisc.crash.log' }
 
@@ -16,7 +16,7 @@ describe Rubymisc do
       begin
         fail SystemExit
       rescue Exception
-        Rubymisc.send(:dump_error_to_file, crash_log)
+        Rbm.send(:dump_error_to_file, crash_log)
       end
 
       File.exist?(crash_log).should be_true
