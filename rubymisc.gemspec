@@ -26,7 +26,7 @@ Gem::Specification.new do |s|
   s.extra_rdoc_files = ['README']
   s.license = 'MIT'
 
-  { rspec:     '~> 2.8.0.rc1',
+  { rspec:     '~> 2.8.0',
     rake:      '~> 0.9.2.2',
     bundler:   '~> 1.0.21',
     simplecov: '~> 0.5.4' }.each { |lib, v| s.add_development_dependency lib.to_s, v }

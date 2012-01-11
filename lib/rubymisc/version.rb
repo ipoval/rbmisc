@@ -1,5 +1,5 @@
 # encoding: utf-8
 
 module Rubymisc
-  VERSION = '0.0.3.3'
+  VERSION = '0.0.4'
 end
