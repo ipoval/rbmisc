@@ -22,13 +22,17 @@
   2.2 Object
 
     #in?
-      e9: 100.in?([1, 2, 3, 4, 5, 100]) # => true
+      e9: 100.in? [1, 2, 3, 4, 5, 100]  # => true
 
     #not functor
-      e10: 100.not.instance_of?(Fixnum)  # => false
+      e10: 100.not.instance_of? Fixnum  # => false
 
     #errors_with_message
-      e11: begin; raise 'Timeout socket'; rescue errors_with_message(/socket/); p 'socket E'; end
+      e11: begin
+             raise 'Timeout socket'
+           rescue errors_with_message /socket/
+             p 'socket E'
+           end
 
     #ASSERT
       e12: ASSERT { fail SecurityError.new('Fail message!') }
