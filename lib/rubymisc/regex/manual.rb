@@ -32,6 +32,8 @@ Ruby character classses and class-like constructs
   \\D              Nondigit.
   \\s              Whitespace character, [\\f\\n\\r\\t\\v].
   \\S              Nonwhitespace character, [^\\f\\n\\r\\t\\v].
+  \\h              Hexadecimal digit.
+  \\H              Negated form of \\h.
 
 Ruby anchors and other zero-width tests
 ---------------------------------------
