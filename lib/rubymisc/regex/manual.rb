@@ -82,6 +82,7 @@ Ruby grouping, capturing, conditional and control
   ?               Match 1 or 0 times.
   {n}             Match exactly n times.
   {n,}            Match at least n times.
+  {,n}            Match at most n times.
   {x,y}           Match at least x times, but no more than y times.
   *?              Match 0 or more times, but as few times as possible.
   +?              Match 1 or more times, but as few times as possible.
