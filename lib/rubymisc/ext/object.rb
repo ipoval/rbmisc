@@ -7,7 +7,7 @@ module Rubymisc
     end
 
     def not
-      not_functor = lambda { |op, *a, &b| !self.__send__(op, *a, &b) }
+      not_functor = ->(op, *a, &b) { !self.__send__(op, *a, &b) }
 
       not_functor.singleton_class.module_eval <<-CODE
         def method_missing(method, *arguments, &block)
