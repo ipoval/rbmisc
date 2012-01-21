@@ -7,15 +7,39 @@ module Rubymisc
     end
 
     def not
-      not_functor = ->(op, *a, &b) { !self.__send__(op, *a, &b) }
+      _not_functor = ->(op, *a, &b) { !self.__send__(op, *a, &b) }
 
-      not_functor.singleton_class.module_eval <<-CODE
-        def method_missing(method, *arguments, &block)
-          call(method, *arguments, &block)
+      _not_functor.singleton_class.module_eval <<-CODE
+        def method_missing(method, *args, &block)
+          call method, *args, &block
         end
       CODE
 
-      not_functor
+      _not_functor
+    end
+
+    def and_try
+      receiver = self
+
+      _and_try_functor = BasicObject.new
+      _and_try_functor.singleton_class.module_eval do
+        def delegate_to
+          @delegate_to = receiver
+        end
+
+        
+      end
+
+
+      _and_try_functor = ->(op, *a, &b) { self ? self.__send__(op, *a, &b) : self }
+
+      _and_try_functor.singleton_class.module_eval <<-CODE
+        def method_missing(method, *args, &block)
+          call method, *args, &block
+        end
+      CODE
+
+      _and_try_functor
     end
   end
 end

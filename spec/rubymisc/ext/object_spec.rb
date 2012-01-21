@@ -35,4 +35,13 @@ describe Rbm::Object do
       collection.not.include?(1).should be false
     end
   end
+
+  describe '#and_try Functor' do
+    specify 'returns nil if nil is a receiver' do
+      puts "=============================="
+      puts "=============================="
+      puts "=============================="
+      p collection.and_try.last
+    end
+  end
 end

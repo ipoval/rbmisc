@@ -2,8 +2,8 @@
 
 module Rubymisc
   module Regex
-    class Manual
-      def self.man
+    module Manual
+      def man
         <<-EOS
 Ruby character representations
 ------------------------------
@@ -99,8 +99,10 @@ Ruby replacement sequences
   $&              Text of match.
   $`              Text after match.
   $+              Last parenthesized match.
+  $~              Match data. Encapsulates the results of a successful pattern match.
         EOS
       end
+      module_function :man
     end
   end
 end
