@@ -19,26 +19,15 @@ module Rubymisc
     end
 
     def and_try
-      receiver = self
-
       _and_try_functor = BasicObject.new
-      _and_try_functor.singleton_class.module_eval do
-        def delegate_to
-          @delegate_to = receiver
-        end
+      (class << _and_try_functor; self; end).module_eval do
+        attr_accessor :delegate_to
 
-        
-      end
-
-
-      _and_try_functor = ->(op, *a, &b) { self ? self.__send__(op, *a, &b) : self }
-
-      _and_try_functor.singleton_class.module_eval <<-CODE
         def method_missing(method, *args, &block)
-          call method, *args, &block
+          delegate_to ? delegate_to.__send__(method, *args, &block) : delegate_to
         end
-      CODE
-
+      end
+      _and_try_functor.delegate_to = self
       _and_try_functor
     end
   end

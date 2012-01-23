@@ -38,10 +38,8 @@ describe Rbm::Object do
 
   describe '#and_try Functor' do
     specify 'returns nil if nil is a receiver' do
-      puts "=============================="
-      puts "=============================="
-      puts "=============================="
-      p collection.and_try.last
+      nil.should respond_to(:and_try)
+      expect { nil.and_try.size.should be nil }.not_to raise_error
     end
   end
 end
