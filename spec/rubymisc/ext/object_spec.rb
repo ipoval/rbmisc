@@ -38,8 +38,17 @@ describe Rbm::Object do
 
   describe '#and_try Functor' do
     specify 'returns nil if nil is a receiver' do
-      nil.should respond_to(:and_try)
+      nil.should respond_to :and_try
       expect { nil.and_try.size.should be nil }.not_to raise_error
+    end
+
+    specify 'returns false if false is a receiver' do
+      false.should respond_to :and_try
+      expect { false.and_try.size }
+    end
+
+    specify 'returns 11 for "test string".and_try.size' do
+      'test string'.and_try.size.should be 11
     end
   end
 end
