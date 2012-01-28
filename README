@@ -27,25 +27,28 @@
     #not functor
       e10: 100.not.instance_of? Fixnum  # => false
 
+    #and_try functor
+      e11: nil.and_try.size             # => nil
+
     #errors_with_message
-      e11: begin
+      e12: begin
              raise 'Timeout socket'
            rescue errors_with_message /socket/
              p 'socket E'
            end
 
     #ASSERT
-      e12: ASSERT { fail SecurityError.new('Fail message!') }
+      e13: ASSERT { fail SecurityError.new('Fail message!') }
 
   2.3 Integer
 
     #percent_of
-      e13: 50.percent_of(100)           # => 50.0
+      e14: 50.percent_of(100)           # => 50.0
 
   2.4 String
 
     #^, #xor
-      e14: 'rubymisc'.xor 'test'        # => "\u0006\u0010\u0011\r\u0019\f\u0000\u0017"
+      e15: 'rubymisc'.xor 'test'        # => "\u0006\u0010\u0011\r\u0019\f\u0000\u0017"
 
   2.5 ActiveRecord::Base
 
