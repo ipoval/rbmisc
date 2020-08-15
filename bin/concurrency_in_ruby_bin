@@ -1,0 +1,7 @@
+./concurrency_in_ruby &
+
+echo -e "GRID OF THREADS:"
+
+ps -fMp $!
+
+kill $!
