@@ -1,6 +1,7 @@
 ## Rbmisc
 
-![codeclimate](https://codeclimate.com/github/ipoval/rbmisc.png)
+[![Maintainability](https://api.codeclimate.com/v1/badges/943b3156ae162ee6d62a/maintainability)](https://codeclimate.com/github/ipoval/rbmisc/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/943b3156ae162ee6d62a/test_coverage)](https://codeclimate.com/github/ipoval/rbmisc/test_coverage)
 ![travis-ci](https://api.travis-ci.org/ipoval/rbmisc.png)
 
 ### Installation
