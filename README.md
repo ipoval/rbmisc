@@ -1,7 +1,7 @@
 ## Rbmisc
 
-[https://codeclimate.com/github/ipoval/rbmisc.png]
-[https://secure.travis-ci.org/ipoval/rbmisc.png]
+![codeclimate](https://codeclimate.com/github/ipoval/rbmisc.png)
+![travis-ci](https://api.travis-ci.org/ipoval/rbmisc.png)
 
 ### Installation
 
