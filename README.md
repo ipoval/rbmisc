@@ -40,6 +40,7 @@ Everyone interacting in the Rbmisc project's codebases, issue trackers, chat roo
 ### Tests
 
 Minitest: https://github.com/seattlerb/minitest
+http://www.rubyinside.com/a-minitestspec-tutorial-elegant-spec-style-testing-that-comes-with-ruby-5354.html
 
 ### Usage
 
