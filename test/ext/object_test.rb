@@ -26,8 +26,8 @@ describe Rbm::Object do
     end
 
     it 'Object#instance_of? returns false when class matches with #not Functor' do
-      assert 100.instance_of?(Fixnum)
-      refute 100.not.instance_of?(Fixnum)
+      assert 100.instance_of?(Integer)
+      refute 100.not.instance_of?(Integer)
     end
 
     it 'Enumerable#include? returns false for collection having an element with #not Functor' do
@@ -39,7 +39,7 @@ describe Rbm::Object do
   describe '#and_try Functor' do
     it 'returns nil if nil is a receiver' do
       _(nil).must_respond_to :and_try
-      assert_equal nil.and_try.size, nil
+      assert_nil nil.and_try.size
     end
 
     it 'returns false if false is a receiver' do

@@ -3,6 +3,8 @@ module Rbmisc
     return if price.nil?
     return price.round    if price >= 100
     return price.round(1) if price >= 30.3
+    price_int = price.to_i
+    return price_int if price_int.to_f.eql?(price)
     return price.round(2)
   end
 

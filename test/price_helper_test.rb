@@ -20,6 +20,10 @@ class SecurityPriceTest < Minitest::Test
     assert_equal 0.14, Rbm.smart_round(0.14)
     assert_equal 0.15, Rbm.smart_round(0.145)
   end
+
+  def test_price_with_insignificant_decimal_zero
+    assert_same 27, Rbm.smart_round(27.0)
+  end
 end
 
 include Rbmisc
