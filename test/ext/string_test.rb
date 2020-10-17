@@ -36,4 +36,14 @@ describe Rbm::String do
       end
     end
   end
+
+  describe '#not_eql?' do
+    it "returns true for different strings" do
+      assert_equal a_str.not_eql?('different'), true
+    end
+
+    it "returns false for same strings" do
+      assert_equal a_str.not_eql?('rbmisc'), false
+    end
+  end
 end

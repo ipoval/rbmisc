@@ -1,4 +1,4 @@
-# encoding: utf-8
+# frozen_string_literal: true
 
 module Rbmisc
   module String
@@ -9,7 +9,13 @@ module Rbmisc
     end
 
     alias_method :xor, :^
+
+    def not_eql?(other)
+      functor_not_eql?.call(self, other)
+    end
   end
 end
 
-::String.module_eval 'include Rbmisc::String'
+::String.module_eval <<-STR, __FILE__, __LINE__ + 1
+  include Rbmisc::String
+STR

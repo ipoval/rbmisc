@@ -19,7 +19,7 @@ module Rbmisc
 end
 
 Dir[
-  File.expand_path('../rbmisc/ext/*.rb', __FILE__)
+  File.expand_path('../rbmisc/ext_core/*.rb', __FILE__)
 ].each(
   &Rbmisc.send(:_ext_load)
 )
@@ -30,6 +30,8 @@ Dir[
   exceptional
   assertions
   price_helper
+  ext_json
+  helpers
 ).each(
   &Rbmisc.send(:_ext_load, './rbmisc/')
 )
